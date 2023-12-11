@@ -76,6 +76,7 @@ header {
 }
 .wrap {
   .shop__header--photoBox {
+    position: relative;
     @include display();
     width: 85%;
     height: 250px;
@@ -157,4 +158,57 @@ header {
 .shop__main--axeBox {
   margin-top: 100px;
   margin-bottom: 500px;
+}
+
+.shop__header--photoBox {
+  overflow: hidden;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.prev {
+  left: 5px;
+}
+
+.next {
+  right: 5px;
+}
+.slide__count-box {
+  @include display();
+  position: absolute;
+  z-index: 99;
+  color: white;
+  width: 7%;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+
+  .arrow {
+    font-size: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .counter {
+    margin: 0 5px;
+  }
 }
