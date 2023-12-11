@@ -1,3 +1,160 @@
-h1 {
-  font-size: 150px;
+// 스크롤 바 CSS
+body {
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #060606;
+  --sb-size: 5px;
+
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+  border: 7px solid #232e33;
+}
+
+$fontColor: #333;
+
+@mixin fontColor() {
+  color: $fontColor;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: -0.02em;
+}
+
+@mixin display() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  color: $fontColor;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  height: 75px;
+
+  .logo {
+    cursor: pointer;
+    width: 10%;
+    font-size: 2em !important;
+    @include fontColor();
+    @include display();
+    p {
+      color: #d1180b;
+    }
+  }
+
+  .shop-nav {
+    display: flex;
+    gap: 32px;
+    a {
+      @include fontColor();
+    }
+  }
+  .shop-nav__info {
+    width: 10%;
+    margin-left: auto;
+    a {
+      @include fontColor();
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+.wrap {
+  .shop__header--photoBox {
+    @include display();
+    width: 85%;
+    height: 250px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  .shop__main--box {
+    width: 82%;
+    margin-bottom: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .shop__code--titleBox {
+      @include display();
+      @include fontColor();
+      justify-content: space-between;
+      padding: 0px 5px 15px 5px;
+      a {
+        font-size: 0.8em;
+      }
+    }
+    .shop__code--Box {
+      @include display();
+      justify-content: space-between;
+      .shop__code--product {
+        cursor: pointer;
+        width: 200px;
+        height: 310px;
+        margin-right: 26px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        .shop__code--content {
+          width: 100px;
+          @include fontColor();
+          font-size: 15px;
+          margin-top: 10px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          transition: all 0.3s ease;
+        }
+        .shop__code--content:hover {
+          width: auto;
+          white-space: normal;
+          overflow: visible;
+          text-overflow: initial;
+        }
+        &:last-child {
+          margin-right: unset;
+        }
+      }
+    }
+  }
+}
+
+.shop__code--ready {
+  cursor: no-drop;
+  @include display();
+  border: 1px solid #ececec;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  &:hover {
+    color: white;
+    background-color: red;
+  }
+}
+
+.shop__main--axeBox {
+  margin-top: 100px;
+  margin-bottom: 500px;
 }
