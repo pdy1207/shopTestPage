@@ -157,7 +157,6 @@
         </div>
       </div>
     </div>
-    <!-- Add this script to your existing code -->
     <script>
       let currentSlide = 0;
       const slides = document.querySelectorAll(".carousel img");
@@ -171,7 +170,7 @@
         } else {
           currentSlide = index;
         }
-
+        // 여기를 증가하면 됩니다.
         const transformValue = -currentSlide * 100 + "%";
         document.querySelector(".carousel").style.transform =
           "translateX(" + transformValue + ")";
@@ -190,7 +189,6 @@
         counter.textContent = currentSlide + 1 + " / " + slides.length;
       }
 
-      // Initial update
       updateCounter();
     </script>
   </body>
