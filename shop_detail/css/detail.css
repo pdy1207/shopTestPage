@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("../../css/reset.css");
 @import url("../../css/style.css");
 header .logo a {
@@ -57,7 +58,7 @@ header .logo a {
   font-weight: bold;
   cursor: pointer;
 }
-.box p {
+.box a:last-child {
   margin-top: 10px;
   color: #333;
   font-weight: bold;
@@ -69,4 +70,152 @@ header .logo a {
 
 #main-box {
   width: 84%;
+}
+
+/* 게시판 CSS */
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  height: 75vh;
+  margin-top: 30px;
+}
+.container .search__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .search__box .search__box--cotainer {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid;
+  width: 23%;
+}
+.container .search__box .search__box--cotainer input {
+  width: 100%;
+  border: unset;
+  padding: 5px;
+  outline: unset;
+}
+
+.search--button {
+  border: unset;
+  background: #333;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.table__container table {
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.table__container table thead tr {
+  background: #333;
+  color: white;
+  font-weight: 600;
+}
+.table__container table th {
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+}
+.table__container table th:nth-child(1) {
+  width: 5%;
+  border-right: 1px solid #fff;
+}
+.table__container table th:nth-child(2) {
+  width: 15%;
+  border-right: 1px solid #fff;
+}
+.table__container table th:nth-child(3) {
+  width: 55%;
+  border-right: 1px solid #fff;
+}
+.table__container table th:nth-child(4) {
+  width: 10%;
+  border-right: 1px solid #fff;
+}
+.table__container table th:nth-child(5) {
+  width: 10%;
+}
+.table__container table tbody tr {
+  cursor: pointer;
+}
+.table__container table tbody tr:hover {
+  background-color: #eee;
+}
+.table__container table tbody tr td {
+  padding: 15px 10px 10px 5px;
+  border-bottom: 1px solid #333;
+}
+.table__container table tbody tr td:nth-child(1) {
+  border-right: 1px solid #333;
+}
+.table__container table tbody tr td:nth-child(2) {
+  border-right: 1px solid #333;
+}
+.table__container table tbody tr td:nth-child(3) {
+  text-align: left;
+  border-right: 1px solid #333;
+}
+.table__container table tbody tr td:nth-child(4) {
+  border-right: 1px solid #333;
+}
+
+/* 게시판 상세보기 */
+.notice__detail--box {
+  padding: 30px;
+  margin-left: 57px;
+}
+.notice__detail--box h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.notice__detail--box .detail__notice {
+  width: 50%;
+}
+.notice__detail--box .detail__notice .detail__notice--button--box {
+  display: flex;
+  justify-content: flex-end;
+}
+.notice__detail--box .detail__notice .info__box--title {
+  margin-top: 10px;
+}
+.notice__detail--box .detail__notice .info__box--title .title__box {
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+.notice__detail--box .detail__notice .info__box--title .title__box p {
+  padding: 15px 5px 15px 5px;
+  background: #333;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  width: 20%;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+.notice__detail--box .detail__notice .info__box--title .title__box .title__box--user {
+  padding-left: 10px;
+  width: 80%;
+  outline: unset;
+  border: unset;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: not-allowed;
+  background: none;
+}
+.notice__detail--box .detail__notice .info__box--title .title__box:last-child {
+  border-top: unset;
+}
+.notice__detail--box .detail__notice .info__box--title .title__box:last-child p {
+  border-bottom: unset;
+}
+.notice__detail--box .detail__notice .info__box--title .title__box:last-child input {
+  cursor: text;
 }/*# sourceMappingURL=detail.css.map */

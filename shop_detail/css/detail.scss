@@ -53,7 +53,7 @@ header .logo a {
     font-weight: bold;
     cursor: pointer;
   }
-  p {
+  a:last-child {
     margin-top: 10px;
     color: #333;
     font-weight: bold;
@@ -65,4 +65,166 @@ header .logo a {
 }
 #main-box {
   width: 84%;
+}
+/* 게시판 CSS */
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  height: 75vh;
+  margin-top: 30px;
+
+  .search__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .search__box--cotainer {
+      display: flex;
+      align-items: center;
+      padding-bottom: 5px;
+      border-bottom: 1px solid;
+      width: 23%;
+
+      input {
+        width: 100%;
+        border: unset;
+        padding: 5px;
+        outline: unset;
+      }
+    }
+  }
+}
+.search--button {
+  border: unset;
+  background: #333;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.table__container table {
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+
+  thead tr {
+    background: #333;
+    color: white;
+    font-weight: 600;
+  }
+
+  th {
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+  }
+
+  th:nth-child(1) {
+    width: 5%;
+    border-right: 1px solid #fff;
+  }
+
+  th:nth-child(2) {
+    width: 15%;
+    border-right: 1px solid #fff;
+  }
+
+  th:nth-child(3) {
+    width: 55%;
+    border-right: 1px solid #fff;
+  }
+
+  th:nth-child(4) {
+    width: 10%;
+    border-right: 1px solid #fff;
+  }
+
+  th:nth-child(5) {
+    width: 10%;
+  }
+  tbody {
+    tr {
+      cursor: pointer;
+      &:hover {
+        background-color: #eee;
+      }
+      td {
+        padding: 15px 10px 10px 5px;
+        border-bottom: 1px solid #333;
+        &:nth-child(1) {
+          border-right: 1px solid #333;
+        }
+
+        &:nth-child(2) {
+          border-right: 1px solid #333;
+        }
+
+        &:nth-child(3) {
+          text-align: left;
+          border-right: 1px solid #333;
+        }
+
+        &:nth-child(4) {
+          border-right: 1px solid #333;
+        }
+      }
+    }
+  }
+}
+
+/* 게시판 상세보기 */
+
+.notice__detail--box {
+  padding: 30px;
+  margin-left: 57px;
+  h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  .detail__notice {
+    width: 50%;
+    .detail__notice--button--box {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .info__box--title {
+      margin-top: 10px;
+      .title__box {
+        display: flex;
+        align-items: center;
+        border-top: 2px solid #333;
+        border-bottom: 2px solid #333;
+        p {
+          padding: 15px 5px 15px 5px;
+          background: #333;
+          color: white;
+          font-size: 1em;
+          font-weight: 600;
+          width: 20%;
+          text-align: center;
+          border-bottom: 1px solid white;
+        }
+        .title__box--user {
+          padding-left: 10px;
+          width: 80%;
+          outline: unset;
+          border: unset;
+          font-size: 1em;
+          font-weight: 600;
+          cursor: not-allowed;
+          background: none;
+        }
+      }
+      .title__box:last-child {
+        border-top: unset;
+        p {
+          border-bottom: unset;
+        }
+        input {
+          cursor: text;
+        }
+      }
+    }
+  }
 }
