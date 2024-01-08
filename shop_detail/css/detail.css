@@ -166,7 +166,7 @@ header .logo a {
 
 /* 게시판 상세보기 */
 .notice__detail--box {
-  padding: 30px;
+  padding: 0px 30px 30px 30px;
   margin-left: 57px;
 }
 .notice__detail--box h1 {
@@ -218,4 +218,70 @@ header .logo a {
 }
 .notice__detail--box .detail__notice .info__box--title .title__box:last-child input {
   cursor: text;
+}
+
+.title__box textarea {
+  outline: none;
+  resize: none;
+  border: none;
+}
+
+textarea::-moz-placeholder {
+  color: #888;
+  font-weight: 600;
+}
+
+textarea::placeholder {
+  color: #888;
+  font-weight: 600;
+}
+
+#title__box--img p {
+  height: 100%;
+  padding: 80px 0px 80px 5px;
+}
+#title__box--img .title__box--img {
+  width: 150px;
+  height: 150px;
+  margin-left: 13px;
+}
+#title__box--img .title__box--img img {
+  width: 100%;
+  height: 100%;
+}
+
+#title__box--content {
+  border-top: unset;
+}
+#title__box--content p {
+  padding: 80px 0px 80px 5px;
+}
+#title__box--content textarea {
+  outline: none;
+  resize: none;
+  border: none;
+  padding: 10px;
+  width: 70%;
+  height: 16vh;
+  font-size: 1.3em;
+}
+
+.title__box--content_box {
+  width: 79%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 13px 0px 13px;
+}
+
+.cancel__box {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cancel__box button {
+  background: transparent;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
 }/*# sourceMappingURL=detail.css.map */

@@ -26,7 +26,7 @@
     </header>
     <!-- 메인 -->
     <div>
-      <div class="box">
+      <div class="box" style="display: none">
         <a
           id="noice__board--non"
           href="../fashion_detail/fashion.html"
@@ -38,7 +38,7 @@
         <a id="noice__board">게시판</a>
       </div>
       <!-- 초기에 보이는 fashion -->
-      <div class="wrap">
+      <div class="wrap" style="display: none">
         <div id="photoBox" class="shop__header--photoBox">
           <div class="carousel">
             <img
@@ -230,9 +230,37 @@
             />
           </div>
         </div>
+        <br />
+        <div class="info__box--title">
+          <div id="title__box--img" class="title__box">
+            <p>이미지</p>
+            <div class="title__box--img">
+              <img
+                src="https://image-cdn.hypb.st/https%3A%2F%2Fkr.hypebeast.com%2Ffiles%2F2023%2F04%2Fworlds-first-ai-fashion-week-ft.jpg?w=960&cbr=1&q=90&fit=max"
+                alt="photo"
+              />
+            </div>
+          </div>
+          <div id="title__box--content" class="title__box">
+            <p>내용</p>
+            <textarea
+              placeholder="헤드셋 : 맥스 &#13;&#10;바람막이 : 무신사 &#13;&#10;평가좀요!!"
+            ></textarea>
+          </div>
+          <div class="title__box">
+            <p>댓글 달기</p>
+            <div class="title__box--content_box">
+              <button>댓글 등록하기</button>
+              <span>전체댓글(4)</span>
+            </div>
+          </div>
+        </div>
+        <div class="cancel__box">
+          <button>취소</button>
+        </div>
       </div>
     </div>
     <script src="../script.js"></script>
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script> -->
   </body>
 </html>
